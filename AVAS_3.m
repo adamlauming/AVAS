@@ -2,11 +2,11 @@ clear all;
 close all;
 clc;
 
-[s1, Fs] = audioread('1200.wav');
-[s2, Fs] = audioread('1500.wav');
-[s3, Fs] = audioread('1800.wav');
-[s4, Fs] = audioread('2100.wav');
-[s5, Fs] = audioread('2400.wav');
+[s1, Fs] = audioread('sampleslib/1200.wav');
+[s2, Fs] = audioread('sampleslib/1500.wav');
+[s3, Fs] = audioread('sampleslib/1800.wav');
+[s4, Fs] = audioread('sampleslib/2100.wav');
+[s5, Fs] = audioread('sampleslib/2400.wav');
 
 len = [length(s1), length(s2), length(s3), length(s4), length(s5)];
 minimumsamples = min(len);
