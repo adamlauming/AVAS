@@ -53,7 +53,7 @@ iteration = 0; % times of the same speed
 for index = 1:length(speedlist)
     speed = speedlist(index)
     if speed <= 20
-        sam_d = mod(speed,5); 
+        sam_d = mod(speed,5);
         if index == 1
             s_out = s1(1:samples_min);
             % Fade in
@@ -62,7 +62,7 @@ for index = 1:length(speedlist)
         elseif index >= 2 && index < length(speedlist)
             speed_before = speedlist(index-1);
             s_out_before = s_out;
-            if abs(speed - speed_before) <= 3
+            if abs(speed - speed_before) <= 5
                 if (iteration+1)*samples_min > minimumsamples
                     iteration = 0;
                 else 

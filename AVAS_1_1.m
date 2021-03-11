@@ -78,18 +78,19 @@ if gate == 0
     figure;
     subplot(211);
     plot(x);
+    axis([0, Fs/2, -inf, inf]);
     subplot(212)
     N=length(x);
     f=(0:N-1)*Fs/N;
     % disg=20*log10(abs(fx));
     % plot(f(1:N/2+1),disg(1:N/2+1))
     plot(f(1:N/2+1),abs(fx(1:N/2+1)));
-
     x=s_out;
     fx=fft(x);
     figure;
     subplot(211);
     plot(x);
+    axis([0, Fs/2, -inf, inf]);
     subplot(212)
     N=length(x);
     f=(0:N-1)*Fs/N;
